@@ -51,7 +51,7 @@ export default function Services() {
     <section id="services" className="py-32 bg-zinc-50 text-zinc-950 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="flex flex-col md:flex-row gap-8 justify-between items-end mb-16">
+        <div className="flex flex-col md:flex-row gap-8 justify-between items-start md:items-end mb-16">
           <div className="max-w-2xl">
             <motion.span
               initial={{ opacity: 0 }}
@@ -76,7 +76,7 @@ export default function Services() {
              whileInView={{ opacity: 1, x: 0 }}
              viewport={{ once: true }}
              transition={{ duration: 0.6, delay: 0.2 }}
-             className="text-zinc-500 max-w-md"
+             className="text-zinc-500 max-w-md text-left md:text-right"
           >
              Comprehensive vertical transportation solutions engineered for uncompromising performance, safety, and operational longevity.
           </motion.p>

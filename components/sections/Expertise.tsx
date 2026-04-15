@@ -37,7 +37,7 @@ export default function Expertise() {
               key={`${brand}-${i}`}
               className="mx-8 md:mx-16 flex items-center justify-center"
             >
-              <h3 className="text-3xl md:text-5xl font-black tracking-tighter text-zinc-200/50 hover:text-orange-500/80 transition-colors duration-500 uppercase select-none">
+              <h3 className="text-3xl md:text-5xl font-black tracking-tighter text-orange-500/80 md:text-zinc-200/50 md:hover:text-orange-500/80 transition-colors duration-500 uppercase select-none">
                 {brand}
               </h3>
             </div>

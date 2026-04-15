@@ -38,7 +38,7 @@ export default function Contact() {
           </motion.span>
           
           <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tighter">
-            Let's discuss your vertical transport needs<span className="text-orange-500">.</span>
+            Let&apos;s discuss your vertical transport needs<span className="text-orange-500">.</span>
           </motion.h2>
 
           <motion.p variants={itemVariants} className="text-zinc-400 text-lg mb-12 max-w-lg leading-relaxed font-medium">
@@ -51,9 +51,9 @@ export default function Contact() {
                 <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-orange-500/10 group-hover:border-orange-500/30 transition-all duration-300">
                    <Call02Icon size={24} className="text-orange-400" />
                 </div>
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col justify-center min-w-0">
                    <h4 className="text-sm font-bold uppercase tracking-wider text-zinc-500 mb-1">Phone <span className="text-xs font-normal normal-case ml-2 text-zinc-600">Mon-Fri 8am - 6pm</span></h4>
-                   <a href="tel:+233242017545" className="text-2xl font-black text-white hover:text-orange-400 transition-colors">+233 242 017 545</a>
+                   <a href="tel:+233242017545" className="text-xl sm:text-2xl font-black text-white hover:text-orange-400 transition-colors wrap-break-word">+233 242 017 545</a>
                 </div>
              </motion.div>
 
@@ -62,7 +62,7 @@ export default function Contact() {
                 <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-green-500/10 group-hover:border-green-500/30 transition-all duration-300">
                    <WhatsappIcon size={28} className="text-green-500" />
                 </div>
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col justify-center min-w-0">
                    <div className="flex items-center gap-3 mb-1">
                       <h4 className="text-sm font-bold uppercase tracking-wider text-zinc-500">WhatsApp</h4>
                       <span className="bg-green-500/10 text-green-400 text-[10px] uppercase font-bold px-2 py-0.5 rounded-full border border-green-500/20">Fastest response</span>
@@ -80,7 +80,7 @@ export default function Contact() {
                 </div>
                 <div className="flex flex-col justify-center">
                    <h4 className="text-sm font-bold uppercase tracking-wider text-zinc-500 mb-1">Email <span className="text-xs font-normal normal-case ml-2 text-zinc-600">Project proposals</span></h4>
-                   <a href="mailto:info@aesghana.com" className="text-xl font-bold text-white hover:text-blue-400 transition-colors">info@aesghana.com</a>
+                   <a href="mailto:info@aesghana.com" className="text-lg sm:text-xl font-bold text-white hover:text-blue-400 transition-colors break-all">info@aesghana.com</a>
                 </div>
              </motion.div>
           </div>

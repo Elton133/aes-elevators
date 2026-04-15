@@ -46,7 +46,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
           <div>
             <motion.span
               initial={{ opacity: 0 }}
@@ -81,7 +81,7 @@ export default function Projects() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex items-center gap-2 group text-orange-400 hover:text-orange-300 transition-colors uppercase text-sm tracking-widest font-bold"
+            className="inline-flex items-center gap-2 group text-orange-400 hover:text-orange-300 transition-colors uppercase text-sm tracking-widest font-bold"
           >
              Start Your Project 
              <div className="w-8 h-8 rounded-full bg-orange-500/10 flex items-center justify-center group-hover:bg-orange-500/20 transition-colors">

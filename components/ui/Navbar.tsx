@@ -7,6 +7,7 @@ export default function Navbar() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() || 0;
@@ -67,6 +68,72 @@ export default function Navbar() {
               </a>
             </div>
           </div>
+
+          <button
+            type="button"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
+            className="md:hidden inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 p-2 text-white hover:bg-white/10 transition-colors"
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+          >
+            <span className="sr-only">{isMobileMenuOpen ? "Close menu" : "Open menu"}</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-6 w-6"
+            >
+              {isMobileMenuOpen ? (
+                <>
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </>
+              ) : (
+                <>
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <line x1="3" y1="18" x2="21" y2="18" />
+                </>
+              )}
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          isMobileMenuOpen ? "max-h-[420px] border-t border-white/10" : "max-h-0"
+        }`}
+      >
+        <div className="px-4 pb-6 pt-4 sm:px-6 space-y-2 bg-black/95 backdrop-blur-xl">
+          {links.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="block rounded-xl px-4 py-3 text-base font-semibold text-zinc-100 hover:bg-white/10 transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {link.name}
+            </a>
+          ))}
+          <a
+            href="tel:+233242017545"
+            className="flex items-center gap-2 rounded-xl px-4 py-3 text-base font-semibold text-zinc-100 hover:bg-white/10 transition-colors"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <Call02Icon size={18} />
+            +233 242 017 545
+          </a>
+          <a
+            href="#contact"
+            className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-bold text-black hover:bg-orange-500 hover:text-white transition-all"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Get a Quote
+          </a>
         </div>
       </div>
     </motion.nav>
