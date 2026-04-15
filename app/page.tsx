@@ -22,7 +22,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 bg-black border-t border-zinc-900 text-center text-zinc-500">
         <p className="text-sm font-medium tracking-wide">© {new Date().getFullYear()} Allotey Engineering Services (AES). All rights reserved.</p>
-        <p className="text-xs mt-2 text-zinc-700">Elevating Ghana's Skyline.</p>
+        <p className="text-xs mt-2 text-zinc-700">Elevating Ghana&apos;s Skyline.</p>
       </footer>
     </main>
   );
